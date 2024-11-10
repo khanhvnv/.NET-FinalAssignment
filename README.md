@@ -1,7 +1,25 @@
 # Starter app for Create a web UI with ASP.NET Core
 
-Welcome! This is the homework for the Challenge 06:
-- Start building Home Page: Category Menu, Featured Product (Hard-coded data)
+Welcome! This is the homework for the Final Assignment
+
+## Objective
+Each person is to build an ecommerce web site with minimum functionality below:
+For customers:
+-	Home page: category menu, features products
+-	View products by category
+-	View product details
+-	Product rating
+-	Register
+-	Login/Logout 
+	   + Optional (shopping cart, ordering, IdentityServer4)
+For admin:
+-	Login/logout
+-	Manage product categories (Name, Description)
+-	Manage products (Name, Category, Description, Price, Images, CreatedDate, UpdatedDate)
+-	View customers
+The project should apply as many techniques of ASP.NET MVC Core as possible. For example: TagHelpers, Razor Pages, ViewComponents and have Unit Test. The Unit Test do not need to have a high coverage number but should demonstrate the ability to write unit test for common components: Controllers, ViewComponents, Services, …
+
+## Completed version
 
 ## Completed version
 
