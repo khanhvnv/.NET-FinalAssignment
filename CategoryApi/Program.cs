@@ -22,12 +22,20 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/categories", async (ApplicationDbContext context) =>
+app.MapGet("/api/categories", async (ApplicationDbContext context) =>
 {
     var categories = await context.Categories.ToListAsync();
     return categories;
 })
-.WithName("GetCategories")
+.WithName("GetProductss")
+.WithOpenApi();
+
+app.MapGet("/api/products", async (ApplicationDbContext context) =>
+{
+    var products = await context.Products.ToListAsync();
+    return products;
+})
+.WithName("GetProducts")
 .WithOpenApi();
 
 app.Run();

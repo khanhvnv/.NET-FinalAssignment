@@ -3,6 +3,7 @@ using CategoryApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CategoryApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241112152940_second  Migrate to update image folders in Products data")]
+    partial class secondMigratetoupdateimagefoldersinProductsdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -97,7 +100,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 1,
                             Images = "/images/cakes/Banh-Kem-Dau-1.jpg",
                             Name = "Bánh kem nhân dâu",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
@@ -105,7 +108,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 1,
                             Images = "/images/cakes/Banh-Kem-Bap-1-2.jpg",
                             Name = "Bánh kem bắp",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
@@ -113,7 +116,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 1,
                             Images = "/images/cakes/Banh-Kem-Thom-10-1.jpg",
                             Name = "Bánh kem nhân mứt",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
@@ -121,7 +124,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 2,
                             Images = "/images/baked-cakes/sandwich-ngu-coc.jpg",
                             Name = "Bánh mì",
-                            Price = 23000m
+                            Price = 23.000m
                         },
                         new
                         {
@@ -129,7 +132,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 2,
                             Images = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg",
                             Name = "Bánh quy",
-                            Price = 25000m
+                            Price = 25.000m
                         },
                         new
                         {
@@ -137,7 +140,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 2,
                             Images = "/images/baked-cakes/Banh-Donut.jpg",
                             Name = "Bánh donut",
-                            Price = 15000m
+                            Price = 15.000m
                         },
                         new
                         {
@@ -145,7 +148,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 3,
                             Images = "/images/cold-cakes/Banh-Flan-2.jpg",
                             Name = "Bánh flan",
-                            Price = 12000m
+                            Price = 12.000m
                         },
                         new
                         {
@@ -153,7 +156,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 3,
                             Images = "/images/cold-cakes/banh_su_kem.jpg",
                             Name = "Bánh su kem",
-                            Price = 33000m
+                            Price = 33.000m
                         },
                         new
                         {
@@ -161,7 +164,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 3,
                             Images = "/images/cold-cakes/pudding-xoai.jpg",
                             Name = "Pudding",
-                            Price = 35000m
+                            Price = 35.000m
                         },
                         new
                         {
@@ -169,7 +172,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 4,
                             Images = "/images/ice-cream/Kem-Vani.jpg",
                             Name = "Kem vani",
-                            Price = 13000m
+                            Price = 13.000m
                         },
                         new
                         {
@@ -177,7 +180,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 4,
                             Images = "/images/ice-cream/Kem-Dau-Xanh.jpg",
                             Name = "Kem đậu xanh",
-                            Price = 13000m
+                            Price = 13.000m
                         },
                         new
                         {
@@ -185,7 +188,7 @@ namespace CategoryApi.Migrations
                             CategoryId = 4,
                             Images = "/images/ice-cream/Kem-Dau.jpg",
                             Name = "Kem dâu",
-                            Price = 13000m
+                            Price = 13.000m
                         });
                 });
 #pragma warning restore 612, 618

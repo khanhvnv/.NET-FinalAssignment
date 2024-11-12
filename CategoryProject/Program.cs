@@ -15,6 +15,7 @@ builder.Services.AddHttpClient<CategoryService>()
             ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
         };
     });
+builder.Services.AddHttpClient<ProductService>();
 
 var app = builder.Build();
 

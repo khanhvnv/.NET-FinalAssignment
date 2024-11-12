@@ -1,0 +1,88 @@
+using System;
+using Microsoft.AspNetCore.Mvc;
+using CategoryApi.Models;
+using SharedLibrary.Models;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace CategoryApi.Controllers{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ProductController : ControllerBase
+    {
+        private static List<Product> _products = new();
+        private readonly Products _productService;
+
+        public ProductController(ProductService productService)
+        {
+            _productService = productService;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var products = await product.GetProductsAsync();
+            return View(products);
+        }
+        [HttpGet]
+        public ActionResult<List<ProductDto>> Get()
+        {
+            return _products.Select(p => new ProductDto
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Price = p.Price,
+                CategoryId = p.CategoryId
+            }).ToList();
+        }
+
+        [HttpPost]
+        public ActionResult<ProductDto> Create(ProductDto productDto)
+        {
+            var product = new Product
+            {
+                Id = _products.Count + 1,
+                Name = productDto.Name,
+                Price = productDto.Price,
+                CategoryId = productDto.CategoryId
+            };
+            _products.Add(product);
+            return CreatedAtAction(nameof(GetById), new { id = product.Id }, productDto);
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<ProductDto> GetById(int id)
+        {
+            var product = _products.FirstOrDefault(p => p.Id == id);
+            if (product == null) return NotFound();
+
+            return new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                CategoryId = product.CategoryId
+            };
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, ProductDto productDto)
+        {
+            var product = _products.FirstOrDefault(p => p.Id == id);
+            if (product == null) return NotFound();
+            product.Name = productDto.Name;
+            product.Price = productDto.Price;
+            product.CategoryId = productDto.CategoryId;
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var product = _products.FirstOrDefault(p => p.Id == id);
+            if (product == null) return NotFound();
+
+            _products.Remove(product);
+            return NoContent();
+        }
+    }
+}

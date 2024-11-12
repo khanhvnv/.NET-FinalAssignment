@@ -3,6 +3,7 @@ using CategoryApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CategoryApi.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241112152104_firs  Migrate to add Products data")]
+    partial class firsMigratetoaddProductsdata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,97 +98,97 @@ namespace CategoryApi.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Dau-1.jpg",
+                            Images = "/images/Banh-Kem-Dau-1.jpg",
                             Name = "Bánh kem nhân dâu",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Bap-1-2.jpg",
+                            Images = "/images/Banh-Kem-Bap-1-2.jpg",
                             Name = "Bánh kem bắp",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 1,
-                            Images = "/images/cakes/Banh-Kem-Thom-10-1.jpg",
+                            Images = "/images/Banh-Kem-Thom-10-1.jpg",
                             Name = "Bánh kem nhân mứt",
-                            Price = 335000m
+                            Price = 335.000m
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/sandwich-ngu-coc.jpg",
+                            Images = "/images/sandwich-ngu-coc.jpg",
                             Name = "Bánh mì",
-                            Price = 23000m
+                            Price = 23.000m
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg",
+                            Images = "/images/Quy-Bo-Dau-Phong.jpg",
                             Name = "Bánh quy",
-                            Price = 25000m
+                            Price = 25.000m
                         },
                         new
                         {
                             Id = 6,
                             CategoryId = 2,
-                            Images = "/images/baked-cakes/Banh-Donut.jpg",
+                            Images = "/images/Banh-Donut.jpg",
                             Name = "Bánh donut",
-                            Price = 15000m
+                            Price = 15.000m
                         },
                         new
                         {
                             Id = 7,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/Banh-Flan-2.jpg",
+                            Images = "/images/Banh-Flan-2.jpg",
                             Name = "Bánh flan",
-                            Price = 12000m
+                            Price = 12.000m
                         },
                         new
                         {
                             Id = 8,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/banh_su_kem.jpg",
+                            Images = "/images/banh_su_kem.jpg",
                             Name = "Bánh su kem",
-                            Price = 33000m
+                            Price = 33.000m
                         },
                         new
                         {
                             Id = 9,
                             CategoryId = 3,
-                            Images = "/images/cold-cakes/pudding-xoai.jpg",
+                            Images = "/images/pudding-xoai.jpg",
                             Name = "Pudding",
-                            Price = 35000m
+                            Price = 35.000m
                         },
                         new
                         {
                             Id = 10,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Vani.jpg",
+                            Images = "/images/Kem-Vani.jpg",
                             Name = "Kem vani",
-                            Price = 13000m
+                            Price = 13.000m
                         },
                         new
                         {
                             Id = 11,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Dau-Xanh.jpg",
+                            Images = "/images/Kem-Dau-Xanh.jpg",
                             Name = "Kem đậu xanh",
-                            Price = 13000m
+                            Price = 13.000m
                         },
                         new
                         {
                             Id = 12,
                             CategoryId = 4,
-                            Images = "/images/ice-cream/Kem-Dau.jpg",
+                            Images = "/images/Kem-Dau.jpg",
                             Name = "Kem dâu",
-                            Price = 13000m
+                            Price = 13.000m
                         });
                 });
 #pragma warning restore 612, 618

@@ -17,7 +17,7 @@ namespace CategoryProject.Services
         public CategoryService(HttpClient httpClient, ILogger<CategoryService> logger)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new System.Uri("http://localhost:5225/");
+            _httpClient.BaseAddress = new System.Uri("http://localhost:5225/api/");
             _logger = logger;
         }
          public async Task<List<CategoryDto>> GetCategoriesAsync()

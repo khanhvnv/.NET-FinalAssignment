@@ -21,8 +21,6 @@ The project should apply as many techniques of ASP.NET MVC Core as possible. For
 
 ## Completed version
 
-## Completed version
-
 
 ## Contributing
 
@@ -76,13 +74,16 @@ In a terminal, run the following command to trust the .NET development certifica
 	dotnet dev-certs https --trust
 Restart both projects after running this command.
 	
-Step 6: Verify the Home Page
+Step 6: Test the Application
 	
-	1. Run the Application: Launch CategoryProject.
-		○ Open the terminal in CategoryProject project folder and run:	dotnet run
+	1. Run both the CategoryApi and CategoryProject projects.
+		○ Open the terminal in CategoryApi/ CategoryProject project folder and run:	dotnet run
 	2. Access the Home Page: Go to http://localhost:PORT (input the appropriate port for your CategoryProject project), and you should see:
 		○ A Category Menu with static links.
-		○ A Featured Product section (New Arrivals) displaying hard-coded products.
+		○ A Featured Product section (Sản phẩm yêu thích) displaying hard-coded products by default.
+	3. Click on any category:
+		○ Products filtered by that category (from the API) should display.
+	4. Test highlighting of the selected category in the menu.
 		
 Notice:
 Clear SSL Cache and Restart

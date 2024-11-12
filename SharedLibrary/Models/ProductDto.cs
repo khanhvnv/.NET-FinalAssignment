@@ -11,4 +11,5 @@ public class ProductDto
     public string ? Images { get; set; }
     public DateOnly CreatedDate { get; set; }
     public DateOnly UpdatedDate { get; set; }
+    public int CategoryId { get; set; }
 }

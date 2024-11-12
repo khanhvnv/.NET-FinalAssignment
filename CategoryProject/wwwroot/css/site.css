@@ -28,14 +28,23 @@ body {
   padding: 1rem;
 }
 
+/* Prevent unwanted margins and paddings */
+.homepage-container {
+  overflow: hidden; /* Prevent unnecessary scrolling from this container */
+}
+
 /* Category Menu */
 .category-menu {
   width: 20%;
 }
 
+/* Horizontal category menu */
 .category-list {
-  list-style-type: none;
+  display: flex;
+  gap: 1rem; /* Add spacing between categories */
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .category-list li {
@@ -48,6 +57,28 @@ body {
   font-weight: bold;
 }
 
+.category-item {
+  margin: 0;
+}
+/* Highlight for the selected category */
+.category-item a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: #333;
+  font-weight: bold;
+}
+
+.category-item a:hover {
+  background-color: #f5f5f5;
+  color: #007bff;
+}
+
+.category-item.active-category a {
+  background-color: #007bff;
+  color: white;
+}
+
 /* Featured Products */
 .featured-products {
   width: 100%;
@@ -55,8 +86,10 @@ body {
 
 .products-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;  
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+  overflow-y: hidden;
 }
 
 .product-img-top {
@@ -71,18 +104,30 @@ body {
   border-radius: 4px;
 }
 
-.product-item h3 {
+.product-item h5 {
   margin: 0.5rem 0;
 }
 
-.product-item-description {
+.product-item h3 {
+  margin: 0.5rem 0;
+  text-overflow: ellipsis;
+  white-space: normal;  
+  overflow-wrap: break-word;
+}
+
+.product-description {
   margin: 0.5rem 0;
   font-size: 14px;  
 }
-.product-item-price {
+.product-price {
   margin: 0.5rem 0;
 }
-.product-item-title {
+
+.product-item p {
+  margin: 0.3rem 0;
+}
+
+.product-title {
   font-size: 22px; 
   display: -webkit-box;
   -webkit-line-clamp: 2; /* display maximum 2 rows */
@@ -91,4 +136,22 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.active-category a {
+  font-weight: bold;
+  color: #007bff;
+}
+/* Remove vertical scrollbar */
+html, body {
+  overflow-y: hidden; /* Hides the vertical scrollbar */
+}
+
+
+/* Ensure horizontal scrolling for specific containers (like product lists) */
+.featured-products .products-container {
+  overflow-x: auto; /* Enable horizontal scrolling for products */
+  white-space: nowrap; /* Prevent line breaks in child elements */
+  padding-bottom: 1rem; /* Prevent overlapping with any scrollbar */
 }
