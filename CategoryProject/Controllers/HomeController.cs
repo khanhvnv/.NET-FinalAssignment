@@ -21,9 +21,9 @@ namespace CategoryProject.Controllers
         // Hard-coded data for the homepage
         private readonly List<ProductDto> _featuredProducts = new()
         {
-            new ProductDto { Id = 1, Name = "Bánh kem nhân dâu", Description = $"Như 1 trái dâu tươi đỏ mọng", Price = 335.000M, Images = "/images/Banh-Kem-Dau-1.jpg", CreatedDate = new DateOnly(2024,11,08) },
-            new ProductDto { Id = 2, Name = "Bánh quy bơ đậu phộng", Description = $"Thơm ngon giòn béo", Price = 25.000M, Images = "/images/Quy-Bo-Dau-Phong-2.jpg", CreatedDate = new DateOnly(2024,11,08) },
-            new ProductDto { Id = 2, Name = "Bánh Flan", Description = $"Núng nính tan mềm trên đầu lưỡi", Price = 12.000M, Images = "/images/Banh-Flan-2.jpg", CreatedDate = new DateOnly(2024,11,08) },
+            new ProductDto { Id = 1, Name = "Bánh kem nhân dâu", Description = $"Như 1 trái dâu tươi đỏ mọng", Price = 335000, Images = "/images/Banh-Kem-Dau-1.jpg", CreatedDate = new DateOnly(2024,11,08) },
+            new ProductDto { Id = 2, Name = "Bánh quy bơ đậu phộng", Description = $"Thơm ngon giòn béo", Price = 25000, Images = "/images/Quy-Bo-Dau-Phong-2.jpg", CreatedDate = new DateOnly(2024,11,08) },
+            new ProductDto { Id = 2, Name = "Bánh Flan", Description = $"Núng nính tan mềm trên đầu lưỡi", Price = 12000, Images = "/images/Banh-Flan-2.jpg", CreatedDate = new DateOnly(2024,11,08) },
         };
 
         public async Task<IActionResult> Index(int? categoryId)

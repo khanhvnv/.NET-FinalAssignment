@@ -24,21 +24,21 @@ namespace CategoryApi.Data
             );
             // Seed data for products of each category
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, Name = "Bánh kem nhân dâu", Price = 335000M, Images = "/images/cakes/Banh-Kem-Dau-1.jpg", CategoryId = 1},
-                new Product { Id = 2, Name = "Bánh kem bắp", Price = 335000M, Images = "/images/cakes/Banh-Kem-Bap-1-2.jpg", CategoryId = 1},
-                new Product { Id = 3, Name = "Bánh kem nhân mứt", Price = 335000M, Images = "/images/cakes/Banh-Kem-Thom-10-1.jpg", CategoryId = 1},
+                new Product { Id = 1, Name = "Bánh kem nhân dâu", Price = 335000, Images = "/images/cakes/Banh-Kem-Dau-1.jpg", CategoryId = 1},
+                new Product { Id = 2, Name = "Bánh kem bắp", Price = 335000, Images = "/images/cakes/Banh-Kem-Bap-1-2.jpg", CategoryId = 1},
+                new Product { Id = 3, Name = "Bánh kem nhân mứt", Price = 335000, Images = "/images/cakes/Banh-Kem-Thom-10-1.jpg", CategoryId = 1},
 
-                new Product { Id = 4, Name = "Bánh mì", Price = 23000M, Images = "/images/baked-cakes/sandwich-ngu-coc.jpg", CategoryId = 2},
-                new Product { Id = 5, Name = "Bánh quy", Price = 25000M, Images = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg", CategoryId = 2},
-                new Product { Id = 6, Name = "Bánh donut", Price = 15000M, Images = "/images/baked-cakes/Banh-Donut.jpg", CategoryId = 2},
+                new Product { Id = 4, Name = "Bánh mì", Price = 23000, Images = "/images/baked-cakes/sandwich-ngu-coc.jpg", CategoryId = 2},
+                new Product { Id = 5, Name = "Bánh quy", Price = 25000, Images = "/images/baked-cakes/Quy-Bo-Dau-Phong.jpg", CategoryId = 2},
+                new Product { Id = 6, Name = "Bánh donut", Price = 15000, Images = "/images/baked-cakes/Banh-Donut.jpg", CategoryId = 2},
 
-                new Product { Id = 7, Name = "Bánh flan", Price = 12000M, Images = "/images/cold-cakes/Banh-Flan-2.jpg", CategoryId = 3},
-                new Product { Id = 8, Name = "Bánh su kem", Price = 33000M, Images = "/images/cold-cakes/banh_su_kem.jpg", CategoryId = 3},
-                new Product { Id = 9, Name = "Pudding", Price = 35000M, Images = "/images/cold-cakes/pudding-xoai.jpg", CategoryId = 3},
+                new Product { Id = 7, Name = "Bánh flan", Price = 12000, Images = "/images/cold-cakes/Banh-Flan-2.jpg", CategoryId = 3},
+                new Product { Id = 8, Name = "Bánh su kem", Price = 33000, Images = "/images/cold-cakes/banh_su_kem.jpg", CategoryId = 3},
+                new Product { Id = 9, Name = "Pudding", Price = 35000, Images = "/images/cold-cakes/pudding-xoai.jpg", CategoryId = 3},
 
-                new Product { Id = 10, Name = "Kem vani", Price = 13000M, Images = "/images/ice-cream/Kem-Vani.jpg", CategoryId = 4},
-                new Product { Id = 11, Name = "Kem đậu xanh", Price = 13000M, Images = "/images/ice-cream/Kem-Dau-Xanh.jpg", CategoryId = 4},
-                new Product { Id = 12, Name = "Kem dâu", Price = 13000M, Images = "/images/ice-cream/Kem-Dau.jpg", CategoryId = 4}
+                new Product { Id = 10, Name = "Kem vani", Price = 13000, Images = "/images/ice-cream/Kem-Vani.jpg", CategoryId = 4},
+                new Product { Id = 11, Name = "Kem đậu xanh", Price = 13000, Images = "/images/ice-cream/Kem-Dau-Xanh.jpg", CategoryId = 4},
+                new Product { Id = 12, Name = "Kem dâu", Price = 13000, Images = "/images/ice-cream/Kem-Dau.jpg", CategoryId = 4}
             );
         }
     }
